@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Syne, Inter } from 'next/font/google'
+import Nav from './components/Nav'
 import './globals.css'
 
 const syne = Syne({
@@ -26,7 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${syne.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Nav />
+        {children}
+      </body>
     </html>
   )
-};
+}
